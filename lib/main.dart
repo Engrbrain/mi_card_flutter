@@ -13,16 +13,43 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Container(
-            height: 100.0,
-            width: 100.0,
-            margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0),
-            padding: EdgeInsets.all(20.0),
-            color: Colors.white,
-            child: Text("Hello World"),
+          child: Column(
+            //mainAxisSize: MainAxisSize.min,
+           // verticalDirection: VerticalDirection.up,
+            //mainAxisAlignment: MainAxisAlignment.center,
+            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Container(
+                height: 100.0,
+                width: 100.0,
+                color: Colors.white,
+                child: Text("Hello World - This is Our First Container"),
+              ),
+              SizedBox(height: 20.0,),
+              Container(
+                width: 100.0,
+                height: 100.0,
+                color: Colors.blue,
+                child: Text("This is Container 2"),
+              ),
+              Container(
+                width: 100.0,
+                height: 100.0,
+                color: Colors.red,
+                child: Text("This is Container 3"),
+              ),
+              Container(
+                width: double.infinity
+              ),
+            ],
           ),
         ),
       ),
     );
   }
 }
+
+//Keep for future use
